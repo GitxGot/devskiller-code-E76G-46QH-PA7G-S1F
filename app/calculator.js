@@ -31,6 +31,10 @@ var evaluator = function(expression) {
   }
 
   return function(){
+    /**
+     * Iterates through the expression stack, 
+     * references numberStack to operate once operators are found
+     */
     while(expressionStack.length!==0) {
         let val = expressionStack.pop();
         if (!isOperator(val))
